@@ -6,7 +6,7 @@
       - [Class A1000](#class-)
       - [Parameters](#parameters-)
       - [Methods](#class-methods-)
-  * [Module: ticloud](#module--ticloud)
+  * [Module: ticloud](#module-ticloud)
       - [Common Parameters](#parameters--1)
       - [Class FileReputation](#class--1)
       - [Class AVScanners](#class--2)
@@ -42,6 +42,7 @@ A Python module representing the ReversingLabs A1000 malware analysis platform.
 class A1000(object)
 def __init__(self, host, username=None, password=None, token=None, fields=__FIELDS, wait_time_seconds=2, retries=10, verify=True, proxies=None, user_agent=DEFAULT_USER_AGENT):
 ```
+
 #### Parameters:
 `host` - A1000 address  
 `username` - A1000 username  
@@ -53,6 +54,7 @@ def __init__(self, host, username=None, password=None, token=None, fields=__FIEL
 `verify` - verify SSL certificate  
 `proxies` - optional proxies in use  
 `user_agent` - optional user agent string  
+
 ---
 **NOTE!**
 
