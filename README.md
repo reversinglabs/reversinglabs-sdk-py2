@@ -22,6 +22,7 @@
       - [Class TitaniumScale](#class-13)
       - [Parameters](#parameters-2)
       - [Methods](#methods-12)
+  * [Examples](#examples)
 
 
 ![ReversingLabs](logo.jpg)
@@ -284,3 +285,124 @@ def __init__(self, host, token, wait_time_seconds=2, retries=10, verify=True, pr
     - This method combines uploading a sample and obtaining the analysis results
     - The result obtaining action of this method utilizes the set number of retries and wait time in seconds to time out if the analysis results are not ready
 
+
+***
+
+## Examples
+#### A1000
+```python
+from ReversingLabs.SDK.a1000 import A1000
+
+# Using username and password for authorization
+a1000 = A1000(
+    host="https://a1000.address",
+    username="username",
+    password="password",
+    verify=True,
+    wait_time_seconds=3,
+    retries=10
+)
+
+response = a1000.upload_sample_and_get_results(
+    file_path="/path/to/file.exe",
+    retry=True,
+    custom_filename="CustomName",
+    tags="custom,tags,go,here",
+)
+
+json_report = response.json()
+```
+
+```python
+from ReversingLabs.SDK.a1000 import A1000
+
+# Using token for authorization
+a1000 = A1000(
+    host="http://a1000.address",
+    token="1js76asmklaslk288japj29s89z",
+    verify=False,
+    wait_time_seconds=2,
+    retries=15
+)
+
+response = a1000.get_extracted_files(
+    sample_hash="cf23df2207d99a74fbe169e3eba035e633b65d94",
+    page_size=30
+)
+
+json_report = response.json()
+```
+
+#### TitaniumCloud
+```python
+from ReversingLabs.SDK.ticloud import FileReputation, URIStatistics, FileDownload
+
+
+host = "https://data.reversinglabs.com"
+username = "username"
+password = "password"
+user_agent = "MyCustom App v0.0.1"
+
+
+
+file_reputation = FileReputation(
+    host=host,
+    username=username,
+    password=password,
+    user_agent=user_agent
+)
+
+reputation = file_reputation.get_file_reputation(
+    hash_input="cf23df2207d99a74fbe169e3eba035e633b65d94",
+    extended_results=True,
+    show_hashes_in_results=False
+)
+
+
+
+uri_statistics = URIStatistics(
+    host=host,
+    username=username,
+    password=password,
+    user_agent=user_agent
+)
+
+statistics = uri_statistics.get_uri_statistics(
+    uri_input="youtube.com"
+)
+
+
+
+file_download = FileDownload(
+    host=host,
+    username=username,
+    password=password,
+    user_agent=user_agent
+)
+
+download = file_download.download_sample(
+    hash_input="cf23df2207d99a74fbe169e3eba035e633b65d94"
+)
+
+with open("/path/to/file", "wb") as file_handle:
+    file_handle.write(download.content)
+```
+
+#### TitaniumScale
+```python
+from ReversingLabs.SDK.tiscale import TitaniumScale
+
+
+titanium_scale = TitaniumScale(
+    host="https://tiscale.address",
+    token="js765akj329786afhg",
+    verify=True,
+    wait_time_seconds=5,
+    retries=6
+)
+
+results = titanium_scale.upload_sample_and_get_results(
+    file_source=open("/path/to/file.exe", "rb"),
+    full_report=True
+)
+```
