@@ -1,4 +1,4 @@
-![ReversingLabs](logo.png)
+![ReversingLabs](logo.jpg)
 
 # ReversingLabsSDK
 - [ReversingLabsSDK](#reversinglabssdk)
