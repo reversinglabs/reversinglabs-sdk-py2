@@ -1,5 +1,3 @@
-![ReversingLabs](logo.jpg)
-
 # ReversingLabsSDK
 - [ReversingLabsSDK](#reversinglabssdk)
   * [Module: a1000](#module-a10000)
@@ -24,6 +22,10 @@
       - [Class TitaniumScale](#class-13)
       - [Parameters](#parameters-2)
       - [Methods](#methods-12)
+
+
+![ReversingLabs](logo.jpg)
+
 
 A Python SDK for ReversingLabs REST services (TitaniumCloud and appliances) - Python 2 version.
 
@@ -281,3 +283,4 @@ def __init__(self, host, token, wait_time_seconds=2, retries=10, verify=True, pr
     - Accepts a file path string or an opened file in 'rb' mode for file upload and returns a file analysis summary or a full analysis report
     - This method combines uploading a sample and obtaining the analysis results
     - The result obtaining action of this method utilizes the set number of retries and wait time in seconds to time out if the analysis results are not ready
+
