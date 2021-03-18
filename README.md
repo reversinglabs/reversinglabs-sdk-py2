@@ -55,12 +55,9 @@ def __init__(self, host, username=None, password=None, token=None, fields=__FIEL
 `proxies` - optional proxies in use  
 `user_agent` - optional user agent string  
 
----
-**NOTE!**
-
+> *NOTE!*  
 The default means of authorization on the ReversingLabs A1000 REST API is the token.  
 If username and password are used instead, a token fetching request will be done so the token can be used in further actions without the user explicitly providing the token. 
----
 
 #### Class methods:
 - `configuration_dump`
