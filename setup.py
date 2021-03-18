@@ -30,7 +30,9 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: Implementation :: CPython"
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Security",
+        "Topic :: Software Development :: Libraries :: Python Modules"
     ],
     project_urls={
         "Documentation": "https://github.com/reversinglabs/reversinglabs-sdk-py2/blob/main/README.md",
