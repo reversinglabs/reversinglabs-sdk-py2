@@ -1,4 +1,13 @@
+![ReversingLabs](https://raw.githubusercontent.com/MislavReversingLabs/reversinglabs-sdk-py2/master/logo.jpg)
+
 # ReversingLabsSDK
+
+A Python SDK for ReversingLabs REST services (TitaniumCloud and appliances) - Python 2 version.
+
+The idea behind this SDK is to enable easier out-of-the-box development of software integrations and automation services that need to interact with ReversingLabs.
+
+The SDK consists of several modules, where each module represents one ReversingLabs service or ReversingLabs TitaniumCloud.
+
 - [ReversingLabsSDK](#reversinglabssdk)
   * [Module: a1000](#module-a10000)
       - [Class A1000](#class)
@@ -24,18 +33,6 @@
       - [Methods](#methods-12)
   * [Examples](#examples)
 
-
-![ReversingLabs](logo.jpg)
-
-
-A Python SDK for ReversingLabs REST services (TitaniumCloud and appliances) - Python 2 version.
-
-The idea behind this SDK is to enable easier out-of-the-box development of software integrations and automation services that need to interact with ReversingLabs.
-
-The SDK consists of several modules, where each module represents one ReversingLabs service or ReversingLabs TitaniumCloud. 
- 
-
-***
 
 
 ## Module: a1000
