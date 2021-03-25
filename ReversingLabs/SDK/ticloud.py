@@ -340,14 +340,14 @@ class FileAnalysis(TiCloudAPI):
         return response
 
     @staticmethod
-    def extract_uri_list_from_report(reports_dict):
-        """Return a list of all the URIs from a list of results (entries).
-            :param reports_dict: list of results (entries)
-            :type reports_dict: dict
+    def extract_uri_list_from_report(report_dict):
+        """Return a list of all the URIs from a file analysis report dictionary.
+            :param report_dict: file analysis report dictionary
+            :type report_dict: dict
             :return: list of uris
             :rtype: list
         """
-        if not isinstance(reports_dict, dict):
+        if not isinstance(report_dict, dict):
             raise WrongInputError("reports_dict parameter must be a dictionary.")
 
         sha1_key = SHA1
